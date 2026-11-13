@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import AIFloatingButton from './components/AIFloatingButton/AIFloatingButton'
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton'
+import About from './Pages/About/About'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
     <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
     </Routes>
     <Footer/>
     <WhatsAppButton/>
