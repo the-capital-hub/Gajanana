@@ -1,0 +1,341 @@
+
+/* =========================================
+   AI FLOATING ASSISTANT
+========================================= */
+
+.gs-ai-widget {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 99999;
+  font-family: "Manrope", sans-serif;
+}
+
+/* FLOATING BUTTON */
+
+.gs-ai-floating-btn {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #246b5b, #0c4037);
+  color: #ffffff;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 8px 28px rgba(10, 60, 49, 0.3);
+  transition: all 0.3s ease;
+}
+
+.gs-ai-floating-btn svg {
+  width: 27px;
+  height: 27px;
+  position: relative;
+  z-index: 2;
+}
+
+.gs-ai-floating-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(10, 60, 49, 0.4);
+}
+
+.gs-ai-floating-btn.opened {
+  background: #164e45;
+}
+
+/* PULSE */
+
+.gs-ai-pulse {
+  position: absolute;
+  inset: -5px;
+  border: 1px solid rgba(36, 107, 91, 0.5);
+  border-radius: 50%;
+  animation: gs-ai-pulse 2s infinite;
+}
+
+@keyframes gs-ai-pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* TOOLTIP */
+
+.gs-ai-tooltip {
+  position: absolute;
+  right: 75px;
+  padding: 9px 13px;
+  border-radius: 8px;
+  background: #123f38;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(8px);
+  transition: 0.3s ease;
+}
+
+.gs-ai-floating-btn:hover .gs-ai-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* CHAT PANEL */
+
+.gs-ai-panel {
+  position: absolute;
+  right: 0;
+  bottom: 82px;
+  width: 350px;
+  overflow: hidden;
+  border: 1px solid #e4ede8;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 18px 55px rgba(12, 50, 41, 0.2);
+  animation: gs-ai-appear 0.3s ease;
+}
+
+@keyframes gs-ai-appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* PANEL HEADER */
+
+.gs-ai-header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #164e45;
+  color: #ffffff;
+}
+
+.gs-ai-profile {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.gs-ai-avatar {
+  position: relative;
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #164e45;
+  font-size: 21px;
+}
+
+.gs-ai-online {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: #40c783;
+}
+
+.gs-ai-profile h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.gs-ai-profile span {
+  display: block;
+  margin-top: 4px;
+  color: #d2e8dd;
+  font-size: 12px;
+}
+
+.gs-ai-close {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* CHAT BODY */
+
+.gs-ai-body {
+  padding: 20px 17px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.gs-ai-welcome-icon {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #e5f1ec;
+  color: #164e45;
+}
+
+.gs-ai-welcome-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.gs-ai-body h4 {
+  margin: 0 0 8px;
+  color: #164e45;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.gs-ai-body > p {
+  margin: 0 auto 17px;
+  max-width: 285px;
+  color: #71817b;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* QUICK OPTIONS */
+
+.gs-ai-options {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.gs-ai-option {
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #e5eee9;
+  border-radius: 11px;
+  background: #ffffff;
+  color: #164e45;
+  text-align: left;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.gs-ai-option:hover {
+  border-color: #a5cbb9;
+  background: #f3f8f5;
+  transform: translateX(3px);
+}
+
+.gs-ai-option-icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #e5f1ec;
+  color: #164e45;
+}
+
+.gs-ai-option-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.gs-ai-option > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.gs-ai-option strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.gs-ai-option small {
+  display: block;
+  margin-top: 4px;
+  color: #87958f;
+  font-size: 12px;
+}
+
+.gs-ai-option > svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* PANEL FOOTER */
+
+.gs-ai-footer {
+  min-height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border-top: 1px solid #edf1ee;
+  background: #f8faf8;
+  color: #71817b;
+  font-size: 12px;
+}
+
+.gs-ai-footer svg {
+  width: 14px;
+  height: 14px;
+  color: #246b5b;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .gs-ai-widget {
+    right: 16px;
+    bottom: 18px;
+  }
+
+  .gs-ai-floating-btn {
+    width: 56px;
+    height: 56px;
+  }
+
+  .gs-ai-panel {
+    position: fixed;
+    right: 12px;
+    bottom: 86px;
+    width: calc(100vw - 24px);
+    max-width: 350px;
+  }
+
+  .gs-ai-tooltip {
+    display: none;
+  }
+}

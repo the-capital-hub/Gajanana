@@ -1,0 +1,557 @@
+
+/* =========================================
+   GAJANANA SMILE CARE
+   DENTISTRY TREATMENTS
+========================================= */
+
+.gs-treatments-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 20px 0 0;
+  overflow: hidden;
+  background: #F8F7F2;
+  color: #242B2A;
+}
+
+.gs-treatments-container {
+  position: relative;
+  z-index: 2;
+  width: min(1400px, calc(100% - 60px));
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.gs-treatments-heading {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: center;
+  animation: gsTreatHeading 0.8s ease both;
+}
+
+.gs-treatments-label {
+  width: fit-content;
+  min-height: 43px;
+  margin: 0 auto 12px;
+  padding: 7px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1.5px solid #80AA99;
+  border-radius: 40px;
+  background: #E5F1EC;
+  color: #164E45;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.gs-treatments-heading h2 {
+  margin: 0;
+  color: #242B2A;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 70px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.gs-treatments-heading h2 span {
+  color: #164E45;
+}
+
+.gs-treatments-heading-line {
+  width: 350px;
+  max-width: 70%;
+  height: 24px;
+  margin: 5px auto 10px;
+}
+
+.gs-treatments-heading-line svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.gs-treatments-heading p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #4B5551;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.gs-treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* =========================================
+   TREATMENT CARD
+========================================= */
+
+.gs-treatment-card {
+  position: relative;
+  min-width: 0;
+  min-height: 174px;
+  padding: 7px;
+  display: grid;
+  grid-template-columns: 41% 1fr;
+  align-items: center;
+  gap: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(36, 107, 91, 0.20);
+  border-radius: 28px;
+  background: #FFFFFF;
+  color: #242B2A;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(22, 78, 69, 0.06);
+  opacity: 0;
+  animation: gsTreatCardReveal 0.65s ease forwards;
+  animation-delay: calc(var(--card-index) * 0.08s);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.gs-treatment-card:hover {
+  transform: translateY(-5px);
+  border-color: #80AA99;
+  color: #242B2A;
+  box-shadow: 0 15px 30px rgba(22, 78, 69, 0.13);
+}
+
+/* IMAGE */
+
+.gs-treatment-image {
+  width: 100%;
+  height: 158px;
+  overflow: hidden;
+  border-radius: 21px;
+  background: #E5F1EC;
+}
+
+.gs-treatment-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gs-treatment-card:hover .gs-treatment-image img {
+  transform: scale(1.08);
+}
+
+/* CONTENT */
+
+.gs-treatment-content {
+  position: relative;
+  min-width: 0;
+  min-height: 145px;
+  padding: 9px 9px 9px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gs-treatment-title-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-right: 3px;
+}
+
+.gs-treatment-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #E5F1EC;
+  color: #164E45;
+  transition: all 0.3s ease;
+}
+
+.gs-treatment-card:hover .gs-treatment-icon {
+  background: #164E45;
+  color: #FFFFFF;
+}
+
+.gs-treatment-title-row h3 {
+  margin: 0;
+  color: #164E45;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+/* ARROW */
+
+.gs-treatment-arrow {
+  position: absolute;
+  right: 5px;
+  bottom: 8px;
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #80AA99;
+  border-radius: 50%;
+  color: #164E45;
+  background: #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.gs-treatment-card:hover .gs-treatment-arrow {
+  color: #FFFFFF;
+  background: #164E45;
+  border-color: #164E45;
+  transform: translateX(3px);
+}
+
+/* =========================================
+   VIEW ALL BUTTON
+========================================= */
+
+.gs-treatments-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.gs-treatments-button {
+  min-width: 330px;
+  min-height: 60px;
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border-radius: 45px;
+  background: #164E45;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: 0 10px 25px rgba(22, 78, 69, 0.15);
+  transition: all 0.3s ease;
+}
+
+.gs-treatments-button:hover {
+  background: #246B5B;
+  color: #FFFFFF;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(22, 78, 69, 0.2);
+}
+
+.gs-treatments-button svg {
+  transition: transform 0.3s ease;
+}
+
+.gs-treatments-button:hover svg {
+  transform: translateX(6px);
+}
+
+/* =========================================
+   BOTTOM WAVE
+========================================= */
+
+.gs-treatments-wave {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  pointer-events: none;
+}
+
+.gs-treatments-wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================
+   DECORATIVE BACKGROUND
+========================================= */
+
+.gs-treatments-section::before {
+  content: "";
+  position: absolute;
+  top: 90px;
+  left: -110px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #E5F1EC;
+  opacity: 0.65;
+  z-index: -1;
+}
+
+.gs-treatments-section::after {
+  content: "";
+  position: absolute;
+  top: 45px;
+  right: -80px;
+  width: 220px;
+  height: 220px;
+  border: 30px solid #E5F1EC;
+  border-radius: 50%;
+  opacity: 0.45;
+  z-index: -1;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes gsTreatHeading {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gsTreatCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1200px) {
+  .gs-treatments-container {
+    width: calc(100% - 40px);
+  }
+
+  .gs-treatments-grid {
+    gap: 12px;
+  }
+
+  .gs-treatment-card {
+    grid-template-columns: 38% 1fr;
+    gap: 10px;
+    min-height: 155px;
+    border-radius: 22px;
+  }
+
+  .gs-treatment-image {
+    height: 140px;
+    border-radius: 17px;
+  }
+
+  .gs-treatment-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .gs-treatment-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .gs-treatment-title-row h3 {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .gs-treatments-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gs-treatment-card {
+    min-height: 155px;
+  }
+
+  .gs-treatment-image {
+    height: 140px;
+  }
+
+  .gs-treatments-wave {
+    height: 75px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 580px) {
+  .gs-treatments-section {
+    padding-top: 15px;
+  }
+
+  .gs-treatments-container {
+    width: calc(100% - 28px);
+  }
+
+  .gs-treatments-heading {
+    margin-bottom: 22px;
+  }
+
+  .gs-treatments-label {
+    min-height: 39px;
+    padding: 7px 15px;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .gs-treatments-heading h2 {
+    font-size: clamp(35px, 9vw, 43px);
+    letter-spacing: -0.8px;
+  }
+
+  .gs-treatments-heading-line {
+    width: 190px;
+    margin: 6px auto;
+  }
+
+  .gs-treatments-heading p {
+    font-size: 13px;
+  }
+
+  .gs-treatments-grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .gs-treatment-card {
+    min-height: 125px;
+    grid-template-columns: 36% 1fr;
+    gap: 12px;
+    padding: 6px;
+    border-radius: 20px;
+  }
+
+  .gs-treatment-image {
+    height: 112px;
+    border-radius: 15px;
+  }
+
+  .gs-treatment-content {
+    min-height: 108px;
+    padding: 5px 8px 5px 0;
+  }
+
+  .gs-treatment-title-row {
+    gap: 9px;
+  }
+
+  .gs-treatment-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 11px;
+  }
+
+  .gs-treatment-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .gs-treatment-title-row h3 {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .gs-treatment-arrow {
+    width: 32px;
+    height: 32px;
+    right: 3px;
+    bottom: 3px;
+  }
+
+  .gs-treatment-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .gs-treatments-footer {
+    margin-top: 22px;
+  }
+
+  .gs-treatments-button {
+    width: 100%;
+    max-width: 320px;
+    min-width: 0;
+    min-height: 54px;
+    padding: 0 22px;
+    font-size: 13px;
+  }
+
+  .gs-treatments-wave {
+    height: 48px;
+    margin-top: 14px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+  .gs-treatment-card {
+    grid-template-columns: 34% 1fr;
+    gap: 9px;
+  }
+
+  .gs-treatment-title-row {
+    gap: 7px;
+  }
+
+  .gs-treatment-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .gs-treatments-section *,
+  .gs-treatments-section *::before,
+  .gs-treatments-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

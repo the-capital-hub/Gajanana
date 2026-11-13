@@ -1,0 +1,457 @@
+
+/* =========================================
+   GAJANANA SMILE CARE
+   PREMIUM EMERALD NAVBAR
+========================================= */
+
+.gs-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  font-family: "Manrope", sans-serif;
+  background: #ffffff;
+}
+
+/* TOP BAR */
+
+.gs-topbar {
+  width: 100%;
+  background: #164e45;
+  color: #ffffff;
+}
+
+.gs-topbar-container {
+  width: min(1440px, calc(100% - 60px));
+  min-height: 42px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.gs-topbar-contact,
+.gs-topbar-social {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.gs-topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.gs-topbar-item svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.gs-topbar-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+}
+
+/* SOCIAL ICONS */
+
+.gs-social-list {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.gs-social-icon {
+  width: 29px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.gs-social-icon:hover {
+  transform: translateY(-3px);
+}
+
+.gs-social-icon.whatsapp {
+  background: #20bd69;
+}
+
+.gs-social-icon.instagram {
+  background: linear-gradient(135deg, #833ab4, #e1306c, #fcb045);
+}
+
+.gs-social-icon.facebook {
+  background: #1877f2;
+}
+
+/* MAIN NAVIGATION */
+
+.gs-navigation {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(22, 78, 69, 0.07);
+}
+
+.gs-navigation-container {
+  width: min(1440px, calc(100% - 60px));
+  min-height: 88px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* BRAND */
+
+.gs-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.gs-brand-symbol {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #164e45;
+  font-size: 43px;
+}
+
+.gs-brand-content {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.gs-brand-name {
+  color: #164e45;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.gs-brand-caption {
+  margin-top: 7px;
+  padding-top: 5px;
+  border-top: 1px solid #a9beb7;
+  color: #71877f;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+/* DESKTOP MENU */
+
+.gs-desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.gs-nav-link {
+  position: relative;
+  padding: 12px 15px;
+  border-radius: 30px;
+  color: #26332f;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.gs-nav-link:hover,
+.gs-nav-link.active {
+  background: #e5f1ec;
+  color: #164e45;
+}
+
+/* APPOINTMENT BUTTON */
+
+.gs-appointment-btn {
+  min-height: 46px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: 1px solid #164e45;
+  border-radius: 40px;
+  background: #164e45;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.gs-appointment-btn svg {
+  width: 19px;
+  height: 19px;
+}
+
+.gs-appointment-btn:hover {
+  background: #246b5b;
+  border-color: #246b5b;
+  box-shadow: 0 8px 20px rgba(22, 78, 69, 0.16);
+  transform: translateY(-2px);
+}
+
+/* MOBILE TOGGLE */
+
+.gs-mobile-toggle {
+  width: 43px;
+  height: 43px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 11px;
+  background: #e5f1ec;
+  color: #164e45;
+  cursor: pointer;
+}
+
+.gs-mobile-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* MOBILE PANEL */
+
+.gs-mobile-panel {
+  display: none;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .gs-topbar-container,
+  .gs-navigation-container {
+    width: calc(100% - 40px);
+  }
+
+  .gs-navigation-container {
+    gap: 12px;
+  }
+
+  .gs-brand-name {
+    font-size: 17px;
+  }
+
+  .gs-brand-symbol {
+    width: 40px;
+    font-size: 36px;
+  }
+
+  .gs-nav-link {
+    padding: 11px 9px;
+    font-size: 12px;
+  }
+
+  .gs-appointment-btn {
+    padding: 0 13px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 900px) {
+  .gs-topbar-container {
+    min-height: 40px;
+  }
+
+  .gs-topbar-contact {
+    gap: 13px;
+  }
+
+  .gs-topbar-social {
+    gap: 13px;
+  }
+
+  .gs-desktop-nav,
+  .gs-appointment-btn {
+    display: none;
+  }
+
+  .gs-navigation-container {
+    min-height: 76px;
+  }
+
+  .gs-mobile-toggle {
+    display: flex;
+  }
+
+  .gs-mobile-panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 15px 22px 22px;
+    display: block;
+    background: #ffffff;
+    border-top: 1px solid #edf2ef;
+    box-shadow: 0 15px 25px rgba(22, 78, 69, 0.10);
+    border-radius: 0 0 15px 15px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .gs-mobile-panel.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .gs-mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .gs-mobile-link {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 9px;
+    color: #26332f;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .gs-mobile-link:hover,
+  .gs-mobile-link.active {
+    color: #164e45;
+    background: #e5f1ec;
+  }
+
+  .gs-mobile-appointment {
+    min-height: 45px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 30px;
+    background: #164e45;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .gs-mobile-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding-top: 16px;
+  }
+
+  .gs-mobile-social a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e5f1ec;
+    color: #164e45;
+    font-size: 17px;
+    text-decoration: none;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .gs-topbar-container,
+  .gs-navigation-container {
+    width: calc(100% - 28px);
+  }
+
+  .gs-topbar-container {
+    justify-content: center;
+  }
+
+  .gs-topbar-contact {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .gs-topbar-social {
+    display: none;
+  }
+
+  .gs-topbar-item {
+    font-size: 12px;
+  }
+
+  .gs-topbar-divider {
+    height: 15px;
+  }
+
+  .gs-navigation-container {
+    min-height: 70px;
+  }
+
+  .gs-brand {
+    gap: 8px;
+  }
+
+  .gs-brand-symbol {
+    width: 36px;
+    height: 40px;
+    font-size: 33px;
+  }
+
+  .gs-brand-name {
+    font-size: 16px;
+  }
+
+  .gs-brand-caption {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .gs-mobile-toggle {
+    width: 40px;
+    height: 40px;
+  }
+}

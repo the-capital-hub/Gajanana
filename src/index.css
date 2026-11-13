@@ -1,0 +1,389 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   GAJANANA SMILE CARE
+   PREMIUM EMERALD DENTAL THEME
+======================================== */
+
+:root {
+  /* Brand Colors */
+  --primary: #164E45;
+  --primary-dark: #103D36;
+  --secondary: #246B5B;
+  --accent: #C5A46D;
+
+  /* Background Colors */
+  --bg-main: #FFFFFF;
+  --bg-soft: #F8F7F2;
+  --bg-mint: #E5F1EC;
+
+  /* Text Colors */
+  --text-primary: #242B2A;
+  --text-secondary: #66716D;
+  --text-light: #FFFFFF;
+
+  /* UI Colors */
+  --border: #E5EAE6;
+  --success: #246B5B;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 15px rgba(22, 78, 69, 0.06);
+  --shadow-md: 0 10px 30px rgba(22, 78, 69, 0.10);
+  --shadow-lg: 0 20px 50px rgba(22, 78, 69, 0.14);
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Manrope', sans-serif;
+
+  /* Layout */
+  --container: 1380px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  /* Transitions */
+  --transition: 0.3s ease;
+}
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: var(--bg-main);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: left;
+  background: var(--bg-main);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ========================================
+   GLOBAL TYPOGRAPHY
+======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(36px, 5vw, 64px);
+}
+
+h2 {
+  font-size: clamp(30px, 3.5vw, 46px);
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p,
+span,
+a,
+button,
+label,
+input,
+textarea,
+select,
+li,
+small {
+  font-size: inherit;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.container {
+  width: min(var(--container), calc(100% - 60px));
+  margin-inline: auto;
+}
+
+/* ========================================
+   GLOBAL SECTION SPACING
+   Vertical padding maximum 20px
+======================================== */
+
+.section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.section-inner {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 12px 22px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  color: white;
+  background: var(--primary);
+}
+
+/* ========================================
+   GLOBAL CARDS
+======================================== */
+
+.card {
+  background: var(--bg-main);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ========================================
+   IMAGES
+======================================== */
+
+.image-wrapper {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* ========================================
+   FORMS
+======================================== */
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  background: white;
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(36, 107, 91, 0.10);
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+.fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   SELECTION
+======================================== */
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1024px) {
+  .container {
+    width: min(100% - 40px, var(--container));
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: calc(100% - 30px);
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .section {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .btn {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+
+  .container {
+    width: calc(100% - 24px);
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

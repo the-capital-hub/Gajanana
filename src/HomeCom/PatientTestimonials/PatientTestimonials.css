@@ -1,0 +1,672 @@
+
+/* =========================================
+   GAJANANA SMILE CARE
+   PATIENT TESTIMONIALS
+========================================= */
+
+.gs-testimonials-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 20px 0 0;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      rgba(248, 247, 242, 0.91),
+      rgba(248, 247, 242, 0.94)
+    ),
+    url("../../assets/home/testibg.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #242B2A;
+}
+
+.gs-testimonials-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle at 50% 35%,
+    rgba(229, 241, 236, 0.3),
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.gs-testimonials-container {
+  position: relative;
+  z-index: 2;
+  width: min(1400px, calc(100% - 70px));
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.gs-testimonials-heading {
+  max-width: 900px;
+  margin: 0 auto 28px;
+  text-align: center;
+  animation: gsTestimonialHeadingEnter 0.8s ease both;
+}
+
+.gs-testimonials-label {
+  width: fit-content;
+  min-height: 43px;
+  margin: 0 auto 10px;
+  padding: 7px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  border: 1.5px solid #80AA99;
+  border-radius: 40px;
+  background: #E5F1EC;
+  color: #164E45;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.gs-testimonials-heading h2 {
+  margin: 0;
+  color: #242B2A;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.gs-testimonials-heading h2 span {
+  color: #164E45;
+}
+
+.gs-testimonials-heading-line {
+  width: 320px;
+  max-width: 70%;
+  height: 22px;
+  margin: 4px auto 8px;
+}
+
+.gs-testimonials-heading-line svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gs-testimonials-heading p {
+  margin: 0;
+  color: #4B5551;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* =========================================
+   CAROUSEL
+========================================= */
+
+.gs-testimonials-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.gs-testimonials-grid {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* =========================================
+   TESTIMONIAL CARD
+========================================= */
+
+.gs-testimonial-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(36, 107, 91, 0.18);
+  border-radius: 31px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 13px 32px rgba(22, 78, 69, 0.10);
+  animation: gsTestimonialCardEnter 0.55s ease both;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.gs-testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(22, 78, 69, 0.15);
+}
+
+/* =========================================
+   PATIENT IMAGE
+========================================= */
+
+.gs-testimonial-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #E5F1EC;
+}
+
+.gs-testimonial-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 28%;
+  transition: transform 0.7s ease;
+}
+
+.gs-testimonial-card:hover .gs-testimonial-image {
+  transform: scale(1.06);
+}
+
+.gs-testimonial-image-accent {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: -37px;
+  height: 67px;
+  border-top: 4px solid #D9B76B;
+  border-radius: 50% 50% 0 0;
+  background: #164E45;
+  pointer-events: none;
+}
+
+.gs-testimonial-quote-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 49px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(229, 241, 236, 0.95);
+  color: #246B5B;
+}
+
+/* =========================================
+   REVIEW CONTENT
+========================================= */
+
+.gs-testimonial-content {
+  min-height: 245px;
+  padding: 15px 23px 19px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gs-testimonial-stars {
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 7px;
+  color: #D9A52B;
+}
+
+.gs-testimonial-review {
+  flex: 1;
+  margin: 0;
+  color: #343D39;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.gs-testimonial-divider {
+  width: 100%;
+  height: 1px;
+  margin: 14px 0;
+  background: #D9B76B;
+  opacity: 0.85;
+}
+
+/* =========================================
+   AUTHOR
+========================================= */
+
+.gs-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gs-testimonial-avatar {
+  width: 49px;
+  height: 49px;
+  min-width: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #164E45;
+  color: #FFFFFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.gs-testimonial-author-info {
+  min-width: 0;
+}
+
+.gs-testimonial-author-info h3 {
+  margin: 0 0 3px;
+  color: #164E45;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.gs-testimonial-author-info span {
+  display: block;
+  color: #66716C;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   CAROUSEL ARROWS
+========================================= */
+
+.gs-testimonial-arrow {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(36, 107, 91, 0.2);
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #164E45;
+  box-shadow: 0 8px 20px rgba(22, 78, 69, 0.12);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.gs-testimonial-arrow:hover {
+  background: #164E45;
+  color: #FFFFFF;
+  border-color: #164E45;
+}
+
+.gs-testimonial-prev {
+  left: -24px;
+}
+
+.gs-testimonial-next {
+  right: -24px;
+}
+
+/* =========================================
+   DOTS
+========================================= */
+
+.gs-testimonials-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.gs-testimonial-dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 2px solid #80AA99;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gs-testimonial-dot.active {
+  width: 17px;
+  height: 17px;
+  border-color: #164E45;
+  background: #164E45;
+}
+
+/* =========================================
+   BOTTOM INFORMATION STRIP
+========================================= */
+
+.gs-testimonials-stats {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-top: 28px;
+  padding: 20px 0;
+  background: #164E45;
+  border-top: 3px solid #D9B76B;
+}
+
+.gs-testimonials-stats-inner {
+  width: min(1350px, calc(100% - 70px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+}
+
+.gs-testimonial-stat {
+  min-height: 58px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  color: #FFFFFF;
+}
+
+.gs-testimonial-stat:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.gs-testimonial-stat svg {
+  flex-shrink: 0;
+  color: #D9B76B;
+  stroke-width: 1.5;
+}
+
+.gs-testimonial-stat div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.gs-testimonial-stat strong {
+  color: #FFFFFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.gs-testimonial-stat span {
+  color: #E5F1EC;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes gsTestimonialHeadingEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gsTestimonialCardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1150px) {
+  .gs-testimonials-container {
+    width: calc(100% - 50px);
+  }
+
+  .gs-testimonials-grid {
+    gap: 14px;
+  }
+
+  .gs-testimonial-image-wrap {
+    height: 185px;
+  }
+
+  .gs-testimonial-content {
+    min-height: 245px;
+    padding: 14px 15px;
+  }
+
+  .gs-testimonial-author-info h3 {
+    font-size: 14px;
+  }
+
+  .gs-testimonial-arrow {
+    width: 42px;
+    height: 42px;
+  }
+
+  .gs-testimonial-prev {
+    left: -20px;
+  }
+
+  .gs-testimonial-next {
+    right: -20px;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .gs-testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gs-testimonial-card:nth-child(3) {
+    display: none;
+  }
+
+  .gs-testimonial-image-wrap {
+    height: 190px;
+  }
+
+  .gs-testimonials-stats-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 17px;
+  }
+
+  .gs-testimonial-stat:nth-child(2) {
+    border-right: none;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 580px) {
+  .gs-testimonials-section {
+    padding-top: 15px;
+  }
+
+  .gs-testimonials-container {
+    width: calc(100% - 34px);
+  }
+
+  .gs-testimonials-heading {
+    margin-bottom: 22px;
+  }
+
+  .gs-testimonials-label {
+    min-height: 39px;
+    padding: 7px 15px;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .gs-testimonials-heading h2 {
+    font-size: clamp(34px, 9vw, 43px);
+    letter-spacing: -0.7px;
+  }
+
+  .gs-testimonials-heading-line {
+    width: 190px;
+  }
+
+  .gs-testimonials-heading p {
+    font-size: 13px;
+  }
+
+  .gs-testimonials-carousel {
+    padding: 0 5px;
+  }
+
+  .gs-testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .gs-testimonial-card:nth-child(2),
+  .gs-testimonial-card:nth-child(3) {
+    display: none;
+  }
+
+  .gs-testimonial-image-wrap {
+    height: 210px;
+  }
+
+  .gs-testimonial-content {
+    min-height: 215px;
+    padding: 14px 17px 17px;
+  }
+
+  .gs-testimonial-review {
+    font-size: 13px;
+  }
+
+  .gs-testimonial-author-info h3 {
+    font-size: 16px;
+  }
+
+  .gs-testimonial-arrow {
+    top: 105px;
+    width: 37px;
+    height: 37px;
+  }
+
+  .gs-testimonial-arrow svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .gs-testimonial-prev {
+    left: -10px;
+  }
+
+  .gs-testimonial-next {
+    right: -10px;
+  }
+
+  .gs-testimonials-dots {
+    margin-top: 18px;
+  }
+
+  .gs-testimonials-stats {
+    margin-top: 22px;
+    padding: 17px 0;
+  }
+
+  .gs-testimonials-stats-inner {
+    width: calc(100% - 25px);
+    gap: 15px 5px;
+  }
+
+  .gs-testimonial-stat {
+    min-height: 53px;
+    padding: 0 7px;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .gs-testimonial-stat svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .gs-testimonial-stat strong {
+    font-size: 12px;
+  }
+
+  .gs-testimonial-stat span {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .gs-testimonial-stat:nth-child(2) {
+    border-right: none;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+  .gs-testimonial-image-wrap {
+    height: 180px;
+  }
+
+  .gs-testimonial-content {
+    padding: 12px;
+  }
+
+  .gs-testimonial-stat {
+    gap: 5px;
+    padding: 0 4px;
+  }
+
+  .gs-testimonial-stat svg {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .gs-testimonials-section *,
+  .gs-testimonials-section *::before,
+  .gs-testimonials-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

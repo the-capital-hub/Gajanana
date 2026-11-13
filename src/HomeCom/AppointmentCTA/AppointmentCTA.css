@@ -1,0 +1,539 @@
+
+/* =========================================
+   GAJANANA SMILE CARE
+   APPOINTMENT CTA
+   PREMIUM EMERALD DENTAL
+========================================= */
+
+.gs-appointment-cta {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 650px;
+  padding: 20px 0 0;
+  overflow: hidden;
+  background: #164E45;
+  color: #FFFFFF;
+}
+
+.gs-appointment-container {
+  position: relative;
+  z-index: 2;
+  width: min(1500px, calc(100% - 70px));
+  min-height: 590px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.98fr 1.02fr;
+  align-items: center;
+  gap: 30px;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.gs-appointment-content {
+  position: relative;
+  z-index: 3;
+  max-width: 720px;
+  padding: 20px 0 45px 15px;
+  animation: gsAppointmentContentIn 0.9s ease both;
+}
+
+.gs-appointment-label {
+  width: fit-content;
+  min-height: 60px;
+  padding: 7px 27px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 2px solid #D9B76B;
+  border-radius: 50px;
+  color: #FFFFFF;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.gs-appointment-label svg {
+  color: #FFFFFF;
+}
+
+.gs-appointment-content h2 {
+  margin: 24px 0 0;
+  color: #FFFFFF;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(48px, 5.2vw, 78px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1.8px;
+}
+
+.gs-appointment-content h2 span {
+  display: block;
+  color: #E7C36F;
+}
+
+.gs-appointment-heading-line {
+  width: 420px;
+  max-width: 85%;
+  height: 25px;
+  margin: 8px 0 17px;
+}
+
+.gs-appointment-heading-line svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gs-appointment-description {
+  max-width: 650px;
+  margin: 0;
+  color: #F0F3ED;
+  font-family: "Manrope", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.gs-appointment-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 34px;
+}
+
+.gs-appointment-primary,
+.gs-appointment-secondary {
+  min-height: 67px;
+  padding: 0 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  white-space: nowrap;
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.gs-appointment-primary {
+  min-width: 355px;
+  background: linear-gradient(135deg, #F3D47F, #D9B76B);
+  color: #172E28;
+  box-shadow: 0 9px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gs-appointment-primary:hover {
+  color: #172E28;
+  background: #F6DFA5;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
+.gs-appointment-primary svg:last-child {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.gs-appointment-primary:hover svg:last-child {
+  transform: translateX(5px);
+}
+
+.gs-appointment-secondary {
+  min-width: 285px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: transparent;
+  color: #FFFFFF;
+}
+
+.gs-appointment-secondary:hover {
+  background: #FFFFFF;
+  color: #164E45;
+  transform: translateY(-4px);
+}
+
+/* =========================================
+   CARE MESSAGE
+========================================= */
+
+.gs-appointment-trust {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-top: 29px;
+  color: #FFFFFF;
+}
+
+.gs-appointment-trust svg {
+  flex-shrink: 0;
+  color: #E7C36F;
+  stroke-width: 1.7;
+}
+
+.gs-appointment-trust span {
+  padding-left: 19px;
+  border-left: 2px solid #D9B76B;
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* =========================================
+   RIGHT IMAGE
+========================================= */
+
+.gs-appointment-visual {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 550px;
+  margin-left: auto;
+  animation: gsAppointmentImageIn 1s ease both;
+}
+
+.gs-appointment-image-frame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border: 5px solid #D9B76B;
+  border-radius: 48% 0 0 48% / 55% 0 0 55%;
+  background: #E5F1EC;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.22);
+}
+
+.gs-appointment-image-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s ease;
+}
+
+.gs-appointment-visual:hover
+.gs-appointment-image-frame img {
+  transform: scale(1.045);
+}
+
+.gs-appointment-image-border {
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -35px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(217, 183, 107, 0.5);
+  border-radius: 48% 0 0 48% / 55% 0 0 55%;
+  pointer-events: none;
+}
+
+/* =========================================
+   DECORATIVE TOOTH SHAPE
+========================================= */
+
+.gs-appointment-cta::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 35px;
+  left: 39%;
+  width: 190px;
+  height: 190px;
+  border: 2px solid rgba(229, 241, 236, 0.1);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 25px rgba(229, 241, 236, 0.025),
+    0 0 0 55px rgba(229, 241, 236, 0.02);
+}
+
+.gs-appointment-cta::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 35%;
+  bottom: 65px;
+  width: 140px;
+  height: 140px;
+  border: 1px solid rgba(217, 183, 107, 0.2);
+  border-radius: 50%;
+}
+
+/* =========================================
+   BOTTOM WAVE
+========================================= */
+
+.gs-appointment-wave {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  height: 115px;
+  margin-top: -3px;
+  pointer-events: none;
+}
+
+.gs-appointment-wave svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes gsAppointmentContentIn {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes gsAppointmentImageIn {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+@media (max-width: 1250px) {
+  .gs-appointment-container {
+    width: calc(100% - 50px);
+    gap: 20px;
+  }
+
+  .gs-appointment-content {
+    padding-left: 0;
+  }
+
+  .gs-appointment-content h2 {
+    font-size: clamp(45px, 5vw, 65px);
+  }
+
+  .gs-appointment-visual {
+    height: 470px;
+  }
+
+  .gs-appointment-primary {
+    min-width: 300px;
+  }
+
+  .gs-appointment-secondary {
+    min-width: 245px;
+  }
+
+  .gs-appointment-primary,
+  .gs-appointment-secondary {
+    padding: 0 17px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .gs-appointment-cta {
+    min-height: auto;
+  }
+
+  .gs-appointment-container {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 0 15px;
+  }
+
+  .gs-appointment-content {
+    max-width: 720px;
+    padding: 0;
+  }
+
+  .gs-appointment-content h2 {
+    font-size: clamp(48px, 7vw, 68px);
+  }
+
+  .gs-appointment-visual {
+    width: 100%;
+    max-width: 700px;
+    height: 390px;
+    margin: 0 auto;
+  }
+
+  .gs-appointment-image-frame {
+    border-radius: 180px 30px 30px 30px;
+  }
+
+  .gs-appointment-image-border {
+    border-radius: 180px 30px 30px 30px;
+  }
+
+  .gs-appointment-wave {
+    height: 80px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 580px) {
+  .gs-appointment-container {
+    width: calc(100% - 34px);
+    padding-top: 18px;
+    gap: 22px;
+  }
+
+  .gs-appointment-label {
+    min-height: 46px;
+    padding: 6px 17px;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .gs-appointment-label svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .gs-appointment-content h2 {
+    margin-top: 19px;
+    font-size: clamp(37px, 9.2vw, 49px);
+    line-height: 1.13;
+    letter-spacing: -0.8px;
+  }
+
+  .gs-appointment-heading-line {
+    width: 250px;
+    margin: 7px 0 12px;
+  }
+
+  .gs-appointment-description {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .gs-appointment-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .gs-appointment-primary,
+  .gs-appointment-secondary {
+    width: 100%;
+    min-width: 0;
+    min-height: 55px;
+    padding: 0 17px;
+    justify-content: flex-start;
+    font-size: 13px;
+  }
+
+  .gs-appointment-primary svg:last-child {
+    margin-left: auto;
+  }
+
+  .gs-appointment-trust {
+    gap: 12px;
+    margin-top: 19px;
+  }
+
+  .gs-appointment-trust svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .gs-appointment-trust span {
+    padding-left: 12px;
+    font-size: 15px;
+  }
+
+  .gs-appointment-visual {
+    height: 285px;
+    padding: 0;
+  }
+
+  .gs-appointment-image-frame {
+    border-width: 3px;
+    border-radius: 110px 20px 20px 20px;
+  }
+
+  .gs-appointment-image-border {
+    top: -7px;
+    right: -8px;
+    border-radius: 110px 20px 20px 20px;
+  }
+
+  .gs-appointment-wave {
+    height: 52px;
+  }
+
+  .gs-appointment-cta::before {
+    left: 65%;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+  .gs-appointment-content h2 {
+    font-size: 36px;
+  }
+
+  .gs-appointment-visual {
+    height: 245px;
+  }
+
+  .gs-appointment-primary,
+  .gs-appointment-secondary {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .gs-appointment-cta *,
+  .gs-appointment-cta *::before,
+  .gs-appointment-cta *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
