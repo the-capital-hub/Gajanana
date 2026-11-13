@@ -5,20 +5,18 @@
 ========================================= */
 
 .gs-doctors-section {
-  .gs-doctors-section {
   position: relative;
   isolation: isolate;
+  padding: 20px 0 0;
   background:
     linear-gradient(
       rgba(248, 247, 242, 0.88),
       rgba(248, 247, 242, 0.92)
     ),
     url("../../assets/home/docotorbg.png");
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
 }
 
 .gs-doctors-container {
@@ -97,11 +95,13 @@
 
 /* =========================================
    DOCTOR GRID
+   DESKTOP: 4 CARDS FIRST ROW
+   DESKTOP: 3 CENTERED SECOND ROW
 ========================================= */
 
 .gs-doctors-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: 22px;
   align-items: stretch;
 }
@@ -111,6 +111,7 @@
 ========================================= */
 
 .gs-doctor-card {
+  grid-column: span 2;
   min-width: 0;
   overflow: hidden;
   border: 1px solid rgba(36, 107, 91, 0.18);
@@ -126,34 +127,26 @@
     border-color 0.35s ease;
 }
 
-.gs-doctor-card:nth-child(n + 5) {
-  grid-column: span 1;
+/* Second row centered */
+
+.gs-doctor-card:nth-child(5) {
+  grid-column: 2 / span 2;
 }
+
+.gs-doctor-card:nth-child(6) {
+  grid-column: 4 / span 2;
+}
+
+.gs-doctor-card:nth-child(7) {
+  grid-column: 6 / span 2;
+}
+
+/* Hover effect */
 
 .gs-doctor-card:hover {
   transform: translateY(-7px);
   border-color: #80AA99;
   box-shadow: 0 18px 38px rgba(22, 78, 69, 0.15);
-}
-
-/* Center second row */
-
-.gs-doctor-card:nth-child(5) {
-  grid-column: 1 / 2;
-  margin-left: 50%;
-  width: 100%;
-  transform: translateX(50%);
-}
-
-.gs-doctor-card:nth-child(6) {
-  grid-column: 2 / 4;
-}
-
-.gs-doctor-card:nth-child(7) {
-  grid-column: 4 / 5;
-  margin-left: -50%;
-  width: 100%;
-  transform: translateX(-50%);
 }
 
 /* =========================================
@@ -360,12 +353,10 @@
 @keyframes gsDoctorCardEnter {
   from {
     opacity: 0;
-    transform: translateY(25px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -409,13 +400,14 @@
     gap: 18px;
   }
 
+  .gs-doctor-card {
+    grid-column: auto;
+  }
+
   .gs-doctor-card:nth-child(5),
   .gs-doctor-card:nth-child(6),
   .gs-doctor-card:nth-child(7) {
     grid-column: auto;
-    width: auto;
-    margin-left: 0;
-    transform: none;
   }
 
   .gs-doctor-card:hover {
@@ -475,6 +467,16 @@
   .gs-doctors-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+  }
+
+  .gs-doctor-card {
+    grid-column: auto;
+  }
+
+  .gs-doctor-card:nth-child(5),
+  .gs-doctor-card:nth-child(6),
+  .gs-doctor-card:nth-child(7) {
+    grid-column: auto;
   }
 
   .gs-doctor-image-wrap {

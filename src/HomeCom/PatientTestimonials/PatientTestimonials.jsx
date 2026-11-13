@@ -18,36 +18,33 @@ const testimonials = [
     name: "Shasheesh Tiwari",
     image: "/images/testimonials/shasheesh.jpg",
     treatment: "Patient Experience",
-    rating: null,
-    review: "Add the original patient testimonial from your clinic document.",
+    rating: 5,
+    review:
+      "I go for regular hygienist appointments at Dental Clinic and my teeth are much healthier now! I would definitely recommend.",
   },
   {
     name: "Karen Gomes",
     image: "/images/testimonials/karen.jpg",
     treatment: "Patient Experience",
-    rating: null,
-    review: "Add the original patient testimonial from your clinic document.",
+    rating: 5,
+    review:
+      "Dr. Raghavendra is very good. He is polite, does a good job and explains the pros and cons well. My family and I have had a great experience with this clinic. Keep up the good work. Thank you.",
   },
   {
     name: "Ella R. Sudheendra Panganamala",
     image: "/images/testimonials/ella.jpg",
     treatment: "Patient Experience",
-    rating: null,
-    review: "Add the original patient testimonial from your clinic document.",
+    rating: 5,
+    review:
+      "Had a fantastic experience at Gajanana Smile care. The staff was friendly, professional, and made me feel at ease throughout my visit. The clinic was clean and well-maintained, with modern equipment that ensured a smooth and pain-free procedure. Dr. Raghavendra took time to explain every step and answered all my questions patiently. I highly recommend this clinic for anyone looking for quality dental care.",
   },
   {
     name: "Mia G. Sasmita Sahoo",
     image: "/images/testimonials/mia.jpg",
     treatment: "Patient Experience",
-    rating: null,
-    review: "Add the original patient testimonial from your clinic document.",
-  },
-  {
-    name: "Eunice Lobo",
-    image: "/images/testimonials/eunice.jpg",
-    treatment: "Patient Experience",
-    rating: null,
-    review: "Add the original patient testimonial from your clinic document.",
+    rating: 5,
+    review:
+      "Me and my whole family always choose to go to Dr. Raghavendra for any kind of dental issues from the last three to four years and trust me he is very professional and always does what is needed and what is best for our teeth. Recently I visited the clinic to get my root canal cap re-done, general checkup and everything was hassle free and the process completed within a week... I highly recommend the clinic for good and genuine service. Unlike other dentists I visited earlier, he never tries to sell anything which is not needed.",
   },
 ];
 
@@ -81,8 +78,6 @@ function PatientTestimonials() {
 
       <div className="gs-testimonials-container">
 
-        {/* SECTION HEADING */}
-
         <div className="gs-testimonials-heading">
 
           <div className="gs-testimonials-label">
@@ -112,8 +107,6 @@ function PatientTestimonials() {
 
         </div>
 
-        {/* TESTIMONIAL CAROUSEL */}
-
         <div className="gs-testimonials-carousel">
 
           <button
@@ -133,8 +126,6 @@ function PatientTestimonials() {
                 key={`${item.name}-${activeIndex}-${index}`}
               >
 
-                {/* PATIENT IMAGE */}
-
                 <div className="gs-testimonial-image-wrap">
 
                   <img
@@ -151,8 +142,6 @@ function PatientTestimonials() {
                   </div>
 
                 </div>
-
-                {/* REVIEW CONTENT */}
 
                 <div className="gs-testimonial-content">
 
@@ -215,8 +204,6 @@ function PatientTestimonials() {
 
         </div>
 
-        {/* CAROUSEL DOTS */}
-
         <div className="gs-testimonials-dots">
           {testimonials.map((item, index) => (
             <button
@@ -233,8 +220,6 @@ function PatientTestimonials() {
         </div>
 
       </div>
-
-      {/* BOTTOM INFORMATION STRIP */}
 
       <div className="gs-testimonials-stats">
 

@@ -7,32 +7,37 @@ import {
 } from "lucide-react";
 
 import "./MeetDoctors.css";
-
+import parixeet from '../../assets/docotor/parixeet.png'
+import kiran from '../../assets/docotor/kiran.png'
+import raghavendra from '../../assets/docotor/raghavendra.png'
+import vinod from '../../assets/docotor/vinod.png'
+import lakshmi from '../../assets/docotor/lakshmi.png'
+import deepak from '../../assets/docotor/deepak.png'
 const doctors = [
   {
     name: "Parixeet Patel",
     specialty: "pedodontist",
-    image: "/images/doctors/parixeet-patel.jpg",
+    image: parixeet,
   },
   {
     name: "Kiran sunny",
     specialty: "Prosthodontist",
-    image: "/images/doctors/kiran-sunny.jpg",
+    image: kiran,
   },
   {
     name: "Dr Raghavendra N",
     specialty: "Oral and maxilla facial pathologis",
-    image: "/images/doctors/raghavendra.jpg",
+    image: raghavendra,
   },
   {
     name: "Dr Vinod kumar Yadav",
     specialty: "orthodontis",
-    image: "/images/doctors/vinod-kumar.jpg",
+    image: vinod,
   },
   {
     name: "Dr.G Lakshmi Sri Divy",
     specialty: "Periodontist and implantologist",
-    image: "/images/doctors/lakshmi-divy.jpg",
+    image: lakshmi,
   },
   {
     name: "Dr Dhanush CV",
@@ -42,7 +47,7 @@ const doctors = [
   {
     name: "Dr Deepak P",
     specialty: "oral medicine and radiologist",
-    image: "/images/doctors/deepak-p.jpg",
+    image: deepak,
   },
 ];
 
