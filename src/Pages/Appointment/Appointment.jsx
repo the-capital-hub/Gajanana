@@ -16,7 +16,7 @@ import {
   Menu,
 } from "lucide-react";
 import "./Appointment.css";
-
+import app from '../../assets/app.png'
 const CLINIC_PHONE = "9686863278";
 const CLINIC_EMAIL = "info@gajananasmilecare.com";
 
@@ -137,7 +137,7 @@ function Appointment() {
         </div>
         <div className="gs-appointment-hero-image">
           <img
-            src="/images/appointment/dental-clinic.jpg"
+            src={app}
             alt="Modern dental treatment room"
           />
           <div className="gs-appointment-image-shade" />
@@ -183,7 +183,7 @@ function Appointment() {
           <div className="gs-appointment-help">
             <div className="gs-appointment-help-heading">
               <Phone />
-              <div><h3>Need Assistance?</h3><p>Our team is here to help with your booking and queries.</p></div>
+              <div><h3 style={{color:"white"}}>Need Assistance?</h3><p>Our team is here to help with your booking and queries.</p></div>
             </div>
             <a href={`tel:+91${CLINIC_PHONE}`}><Phone size={17} /> +91 {CLINIC_PHONE}</a>
             <a href={`mailto:${CLINIC_EMAIL}`}><Mail size={17} /> {CLINIC_EMAIL}</a>

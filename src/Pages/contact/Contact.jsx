@@ -14,6 +14,8 @@ import {
   Navigation,
 } from "lucide-react";
 import "./Contact.css";
+import image1 from '../../assets/contact/image1.png'
+import image2 from '../../assets/contact/image2.png'
 
 const CLINIC_PHONE = "9686863278";
 const CLINIC_EMAIL = "info@gajananasmilecare.com";
@@ -95,7 +97,7 @@ export default function Contact() {
         </div>
         <div className="gs-contact-hero-image">
           <img
-            src="/images/contact/clinic-reception.jpg"
+            src={image1}
             alt="Reception area at Gajanana Smile Care"
           />
           <div className="gs-contact-hero-image-shade" />
@@ -171,7 +173,7 @@ export default function Contact() {
               <Phone />
             </span>
             <div>
-              <h3>Need quick assistance?</h3>
+              <h3 style={{color:"white"}}>Need quick assistance?</h3>
               <p>Call our team and we will be happy to guide you.</p>
               <a href={`tel:+91${CLINIC_PHONE}`}>
                 Call +91 {CLINIC_PHONE} <ArrowRight size={16} />
@@ -314,7 +316,7 @@ export default function Contact() {
         </div>
         <div className="gs-contact-clinic-image">
           <img
-            src="/images/contact/dental-treatment-room.jpg"
+            src={image2}
             alt="Dental treatment room"
             loading="lazy"
           />

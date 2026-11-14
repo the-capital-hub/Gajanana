@@ -105,7 +105,7 @@ export default function Doctors() {
       <section className="gdm-hero">
         <div className="gdm-hero-copy">
           <span className="gdm-eyebrow"><UsersRound size={16} /> OUR DOCTORS</span>
-          <h1>Meet Our <span>Dental Experts</span></h1>
+          <h1 style={{color:"white"}}>Meet Our <span>Dental Experts</span></h1>
           <p>
             A team of experienced and compassionate dental professionals
             dedicated to your healthy and confident smile.
@@ -212,7 +212,7 @@ export default function Doctors() {
         <div className="gdm-cta-tooth"><Smile size={64} strokeWidth={1.25} /></div>
         <div className="gdm-cta-copy">
           <span>PERSONALISED DENTAL CARE</span>
-          <h2>Consult Our Dental Team Today</h2>
+          <h2 style={{color:"white"}}>Consult Our Dental Team Today</h2>
           <p>Book an appointment with our team and take a step towards a healthier smile.</p>
         </div>
         <Link to="/appointment" className="gdm-cta-button">
