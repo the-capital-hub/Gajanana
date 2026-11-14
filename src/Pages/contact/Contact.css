@@ -1,0 +1,610 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+.gs-contact-page {
+  --contact-green: #075b43;
+  --contact-deep: #034832;
+  --contact-mint: #e8f3ec;
+  --contact-cream: #fbfaf6;
+  --contact-ink: #172c29;
+  --contact-muted: #596562;
+  background: var(--contact-cream);
+  color: var(--contact-ink);
+  font-family: "Manrope", sans-serif;
+  overflow: hidden;
+}
+.gs-contact-page * {
+  box-sizing: border-box;
+}
+.gs-contact-page h1,
+.gs-contact-page h2,
+.gs-contact-page h3 {
+  font-family: "Playfair Display", serif;
+}
+.gs-contact-page a {
+  color: inherit;
+  text-decoration: none;
+}
+.gs-contact-hero {
+  min-height: 270px;
+  display: grid;
+  grid-template-columns: 44% 56%;
+  background: var(--contact-deep);
+}
+.gs-contact-hero-copy {
+  padding: 25px clamp(28px, 7vw, 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.gs-contact-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  padding: 8px 15px;
+  margin-bottom: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 30px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.gs-contact-hero h1 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: clamp(32px, 4vw, 51px);
+  line-height: 1.08;
+}
+.gs-contact-hero h1 span {
+  display: block;
+  color: #e8c98d;
+}
+.gs-contact-hero-copy > p {
+  max-width: 480px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.gs-contact-hero-image {
+  min-height: 270px;
+  position: relative;
+  overflow: hidden;
+}
+.gs-contact-hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 270px;
+  object-fit: cover;
+  object-position: center;
+}
+.gs-contact-hero-image-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(3, 72, 50, 0.16), transparent 40%);
+}
+.gs-contact-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  min-height: 90px;
+  padding: 14px clamp(20px, 5.5vw, 80px);
+  background: #fffefa;
+  border-bottom: 1px solid #e7e9e2;
+}
+.gs-contact-feature {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 4px 15px;
+  border-right: 1px solid #d7ded8;
+}
+.gs-contact-feature:last-child {
+  border-right: 0;
+}
+.gs-contact-feature-icon {
+  color: var(--contact-green);
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+.gs-contact-feature-icon svg {
+  width: 36px;
+  height: 36px;
+  stroke-width: 1.8;
+}
+.gs-contact-feature div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.gs-contact-feature strong {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+}
+.gs-contact-feature div > span {
+  color: var(--contact-muted);
+  font-size: 12px;
+}
+.gs-contact-main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 36px clamp(22px, 4vw, 58px) 28px;
+  display: grid;
+  grid-template-columns: minmax(270px, 0.8fr) minmax(0, 1.55fr);
+  gap: 34px;
+  align-items: start;
+}
+.gs-contact-kicker {
+  color: var(--contact-green);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.35px;
+}
+.gs-contact-info h2 {
+  margin: 8px 0 7px;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.15;
+}
+.gs-contact-info-intro {
+  max-width: 380px;
+  margin: 0 0 20px;
+  color: var(--contact-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+.gs-contact-info-list {
+  display: grid;
+  gap: 14px;
+}
+.gs-contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+.gs-contact-info-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 14px;
+  background: var(--contact-mint);
+  color: var(--contact-green);
+}
+.gs-contact-info-icon svg {
+  width: 27px;
+  height: 27px;
+  stroke-width: 1.8;
+}
+.gs-contact-info-item > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.gs-contact-info-item strong {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+}
+.gs-contact-info-item small {
+  color: var(--contact-muted);
+  font-size: 12px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.gs-contact-callout {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  padding: 18px 19px;
+  border-radius: 17px;
+  color: #fff;
+  background: linear-gradient(130deg, #075b43, #034832);
+}
+.gs-contact-callout-icon {
+  width: 37px;
+  height: 37px;
+  flex: 0 0 auto;
+}
+.gs-contact-callout-icon svg {
+  width: 34px;
+  height: 34px;
+}
+.gs-contact-callout h3 {
+  margin: 0 0 4px;
+  font-size: 19px;
+}
+.gs-contact-callout p {
+  margin: 0 0 9px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.gs-contact-callout a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.gs-contact-callout-watermark {
+  position: absolute;
+  right: 9px;
+  bottom: 5px;
+  width: 75px;
+  height: 75px;
+  color: rgba(255, 255, 255, 0.13);
+  stroke-width: 1;
+}
+.gs-contact-form-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid #e0e8e1;
+  border-radius: 22px;
+  background: #fffefa;
+  box-shadow: 0 12px 30px rgba(18, 54, 43, 0.09);
+}
+.gs-contact-form-card:after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 90px;
+  right: -55px;
+  top: 15px;
+  border-radius: 50%;
+  border-top: 16px solid rgba(174, 219, 190, 0.22);
+  transform: rotate(-18deg);
+  pointer-events: none;
+}
+.gs-contact-form-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 1;
+}
+.gs-contact-form-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  color: var(--contact-green);
+}
+.gs-contact-form-icon svg {
+  width: 40px;
+  height: 40px;
+  stroke-width: 1.8;
+}
+.gs-contact-form-heading h2 {
+  margin: 0 0 3px;
+  color: var(--contact-green);
+  font-size: clamp(22px, 2.5vw, 29px);
+}
+.gs-contact-form-heading p {
+  margin: 0;
+  color: var(--contact-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+.gs-contact-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px 20px;
+  position: relative;
+  z-index: 1;
+}
+.gs-contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  color: #202b29;
+  font-size: 12px;
+  font-weight: 800;
+}
+.gs-contact-field > span b {
+  color: #c63f35;
+}
+.gs-contact-field input,
+.gs-contact-field select,
+.gs-contact-field textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #cbd7d1;
+  border-radius: 11px;
+  outline: 0;
+  background: #fff;
+  color: #263431;
+  font-family: "Manrope", sans-serif;
+  font-size: 12px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.gs-contact-field input,
+.gs-contact-field select {
+  height: 44px;
+  padding: 0 13px;
+}
+.gs-contact-field textarea {
+  min-height: 100px;
+  padding: 12px 13px;
+  line-height: 1.6;
+  resize: vertical;
+}
+.gs-contact-field input::placeholder,
+.gs-contact-field textarea::placeholder {
+  color: #87918d;
+  opacity: 1;
+}
+.gs-contact-field input:focus,
+.gs-contact-field select:focus,
+.gs-contact-field textarea:focus {
+  border-color: var(--contact-green);
+  box-shadow: 0 0 0 3px rgba(7, 91, 67, 0.09);
+}
+.gs-contact-field-full {
+  grid-column: 1/-1;
+}
+.gs-contact-submit {
+  width: 100%;
+  min-height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 13px;
+  color: #fff;
+  background: linear-gradient(100deg, #075b43, #034832);
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.gs-contact-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 18px rgba(3, 72, 50, 0.2);
+}
+.gs-contact-form-note {
+  margin: 10px 0 0;
+  color: #78837e;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.5;
+}
+.gs-contact-success {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: #eaf5ed;
+  color: #176746;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.gs-contact-success svg {
+  flex: 0 0 auto;
+}
+.gs-contact-location {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 15px clamp(22px, 4vw, 58px) 42px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.9fr 0.7fr;
+  gap: 25px;
+  align-items: center;
+}
+.gs-contact-map-card {
+  min-height: 230px;
+  overflow: hidden;
+  border: 9px solid #fff;
+  border-radius: 20px;
+  box-shadow: 0 7px 22px rgba(18, 54, 43, 0.07);
+}
+.gs-contact-map-card iframe {
+  display: block;
+  width: 100%;
+  height: 230px;
+  border: 0;
+}
+.gs-contact-location-copy {
+  padding: 10px 0;
+}
+.gs-contact-location-icon {
+  display: inline-flex;
+  color: var(--contact-green);
+  margin-right: 9px;
+  vertical-align: middle;
+}
+.gs-contact-location-icon svg {
+  width: 28px;
+  height: 28px;
+}
+.gs-contact-location-copy h2 {
+  margin: 7px 0;
+  font-size: clamp(24px, 2.5vw, 31px);
+}
+.gs-contact-location-copy p {
+  margin: 0 0 15px;
+  color: var(--contact-muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.gs-contact-directions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 14px;
+  border: 1px solid #a9cdb9;
+  border-radius: 30px;
+  color: var(--contact-green);
+  background: #fffefa;
+  font-size: 12px;
+  font-weight: 800;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.gs-contact-directions:hover {
+  color: #fff;
+  background: var(--contact-green);
+}
+.gs-contact-clinic-image {
+  height: 220px;
+  overflow: hidden;
+  border-radius: 18px;
+}
+.gs-contact-clinic-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+@media (max-width: 900px) {
+  .gs-contact-hero {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gs-contact-hero-copy {
+    padding: 23px 26px;
+  }
+  .gs-contact-features {
+    padding-inline: 12px;
+  }
+  .gs-contact-feature {
+    gap: 8px;
+    padding-inline: 8px;
+  }
+  .gs-contact-feature-icon svg {
+    width: 29px;
+    height: 29px;
+  }
+  .gs-contact-feature strong {
+    font-size: 12px;
+  }
+  .gs-contact-main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .gs-contact-info-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gs-contact-callout {
+    max-width: 500px;
+  }
+  .gs-contact-location {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gs-contact-clinic-image {
+    display: none;
+  }
+}
+@media (max-width: 620px) {
+  .gs-contact-hero {
+    grid-template-columns: 1fr;
+  }
+  .gs-contact-hero-copy {
+    padding: 27px 21px 23px;
+  }
+  .gs-contact-hero h1 {
+    font-size: 35px;
+  }
+  .gs-contact-hero-image,
+  .gs-contact-hero-image img {
+    min-height: 190px;
+    max-height: 220px;
+  }
+  .gs-contact-features {
+    grid-template-columns: 1fr 1fr;
+    gap: 9px 0;
+    padding: 13px 10px;
+  }
+  .gs-contact-feature {
+    justify-content: flex-start;
+    border-right: 0;
+    padding: 6px 8px;
+  }
+  .gs-contact-feature:nth-child(odd) {
+    border-right: 1px solid #d7ded8;
+  }
+  .gs-contact-feature-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+  .gs-contact-feature div > span {
+    font-size: 12px;
+  }
+  .gs-contact-main {
+    padding: 27px 15px 18px;
+  }
+  .gs-contact-info-list {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+  .gs-contact-info-icon {
+    width: 46px;
+    height: 46px;
+  }
+  .gs-contact-form-card {
+    padding: 20px 15px;
+    border-radius: 17px;
+  }
+  .gs-contact-form-heading {
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .gs-contact-form-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .gs-contact-form-icon svg {
+    width: 31px;
+    height: 31px;
+  }
+  .gs-contact-form-heading h2 {
+    font-size: 22px;
+  }
+  .gs-contact-fields {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+  .gs-contact-field-full {
+    grid-column: auto;
+  }
+  .gs-contact-location {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px 15px 32px;
+  }
+  .gs-contact-map-card {
+    min-height: 210px;
+  }
+  .gs-contact-map-card iframe {
+    height: 210px;
+  }
+  .gs-contact-clinic-image {
+    display: block;
+    height: 190px;
+  }
+}
