@@ -171,10 +171,12 @@
 ========================================= */
 
 .gs-appointment-trust {
+  display: none;
   display: flex;
   align-items: center;
   gap: 19px;
   margin-top: 29px;
+  background-color: #164E45;
   color: #FFFFFF;
 }
 

@@ -15,7 +15,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
-
+import logo from '../../assets/logo.png'
 import "./Navbar.css";
 
 const navLinks = [
@@ -104,14 +104,10 @@ function Navbar() {
           {/* Brand Logo */}
           <Link to="/" className="gs-brand" onClick={closeMenu}>
             <div className="gs-brand-symbol">
-              <FaTooth />
+              <img src={logo} alt="" />
             </div>
 
-            <div className="gs-brand-content">
-              <span className="gs-brand-name">Gajanana</span>
-              <span className="gs-brand-name">Smile Care</span>
-              <span className="gs-brand-caption">DENTAL CLINIC</span>
-            </div>
+            
           </Link>
 
           {/* Desktop Navigation Links */}

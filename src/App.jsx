@@ -12,11 +12,13 @@ import ServiceDetails from './Pages/Services/ServiceDetails'
 import Doctors from './Pages/Doctors/Doctors'
 import Appointment from './Pages/Appointment/Appointment'
 import Contact from './Pages/contact/Contact'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 const App = () => {
   return (
     <>
     <Navbar/>
+    <ScrollToTop/>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/about' element={<About/>}/>

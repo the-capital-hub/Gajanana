@@ -81,7 +81,7 @@ function AppointmentCTA() {
 
           {/* CARE MESSAGE */}
 
-          <div className="gs-appointment-trust">
+          {/* <div className="gs-appointment-trust">
 
             <HeartHandshake size={45} />
 
@@ -89,7 +89,7 @@ function AppointmentCTA() {
               We are here to care for your smile
             </span>
 
-          </div>
+          </div> */}
 
         </div>
 

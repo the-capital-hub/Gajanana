@@ -15,7 +15,7 @@ import {
   ArrowUpRight,
   ChevronRight,
 } from "lucide-react";
-
+import hero from '../../assets/hero.png'
 import "./Footer.css";
 
 function Footer() {
@@ -80,7 +80,7 @@ function Footer() {
 
             <Link to="/" className="gs-footer-brand">
               <span className="gs-footer-brand-icon">
-                <FaTooth />
+                <img src={hero} alt="" />
               </span>
 
               <span className="gs-footer-brand-name">

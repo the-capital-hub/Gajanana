@@ -6,6 +6,7 @@ import SmileMakeover from '../../HomeCom/SmileMakeover/SmileMakeover'
 import PatientTestimonials from '../../HomeCom/PatientTestimonials/PatientTestimonials'
 import DentistryTreatments from '../../HomeCom/DentistryTreatments/DentistryTreatments'
 import AppointmentCTA from '../../HomeCom/AppointmentCTA/AppointmentCTA'
+import DentalStats from '../../HomeCom/DentalStats/DentalStats'
 
 const Home = () => {
   return (
@@ -15,6 +16,8 @@ const Home = () => {
     <DentistryTreatments/>
     <MeetDoctors/>
     <SmileMakeover/>
+    <DentalStats />
+
     <PatientTestimonials/>
     <AppointmentCTA/>
     </>
